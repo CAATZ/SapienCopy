@@ -58,3 +58,8 @@ Progress and remaining time are estimates and may be unavailable after a sizing 
 The app checks Robocopy results but does not hash every copied file or test restoration. Physical USB reconnection, drive-letter changes, physical exFAT/FAT32 copies, live OneDrive stalls, and elevated Explorer drag and drop have not been validated for this release. See the [user guide](README.txt) for details and safe-removal steps.
 
 The executable is unsigned; release downloads include SHA-256 checksums. SapienCopy is an independent project and is not affiliated with Microsoft.
+
+## License
+
+SapienCopy is licensed under the [MIT License](LICENSE.txt).
+Copyright (c) 2026 CAATZ.

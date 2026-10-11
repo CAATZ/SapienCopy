@@ -170,5 +170,9 @@ Run the core regression checks with:
 Tests create isolated fixtures and keep logs under %LOCALAPPDATA%\SapienCopy\Tests.
 Use Get-Help .\test.ps1 -Full for optional test modes and executable checks.
 
+LICENSE
+SapienCopy is licensed under the MIT License. Copyright (c) 2026 CAATZ.
+See LICENSE.txt for the full terms.
+
 Robocopy option reference:
 https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy

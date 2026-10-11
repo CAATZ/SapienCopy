@@ -7,6 +7,11 @@ CHANGES
   and new dated-copy folders to use the SapienCopy name.
 - Added a GitHub overview and updated the detailed user guide.
 
+LICENSE PACKAGING UPDATE
+- Added the MIT License with Copyright (c) 2026 CAATZ to the repository and
+  portable and source packages. Updated documentation and package checksums.
+- The executable and transfer behavior are unchanged by this license update.
+
 COPY BEHAVIOR
 This release retains the existing Robocopy-based transfer engine and controls.
 Completed unchanged files are skipped, differing files are replaced, and
@@ -32,6 +37,7 @@ native drag/drop, and interface regression checks passed. The production
 executable's worker copied the synthetic Unicode fixture successfully.
 Windows denied file-symbolic-link creation for privileged checks; junction
 checks passed. Physical-device limits below remain untested.
+
 KNOWN LIMITS
 - The executable is unsigned.
 - OneDrive downloaded-only filtering uses a cached snapshot; later availability
