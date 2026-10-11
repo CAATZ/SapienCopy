@@ -1,0 +1,10 @@
+*.exe
+*.dll
+*.pdb
+*.zip
+*.log
+/build/
+/bin/
+/obj/
+/test-results/
+/rt/

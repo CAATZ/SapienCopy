@@ -1,0 +1,47 @@
+SAPIENCOPY 1.10.0
+Release date: 2026-10-11
+
+CHANGES
+- Renamed the app to SapienCopy, with a new folder-and-arrow icon.
+- Updated the executable, window, release packages, temporary working folders,
+  and new dated-copy folders to use the SapienCopy name.
+- Added a GitHub overview and updated the detailed user guide.
+
+COPY BEHAVIOR
+This release retains the existing Robocopy-based transfer engine and controls.
+Completed unchanged files are skipped, differing files are replaced, and
+destination-only files remain. Source data is not deleted.
+
+Direct copy places each selected file or folder immediately inside the destination.
+New dated copies use SapienCopy-<date>-<time>-<id>. Update existing copy continues
+to use the drive-relative layout; select the existing copy folder itself.
+
+PAUSE AND RESUME
+Pause retains the original output folder and verified drive identities while
+the app stays open. Pause does not eject drives. Wait for Paused and use Windows
+safe removal before disconnecting a drive.
+
+Robocopy /Z, or /ZB for protected-file copying, remains enabled. An interrupted
+file can restart from the beginning even with restartable mode enabled; exact
+byte-offset recovery is not guaranteed. Resume state does not survive closing
+the app or restarting Windows.
+
+VALIDATION
+Copy-engine, individual-file, volume-identity, pause/resume, estimate, worker,
+native drag/drop, and interface regression checks passed. The production
+executable's worker copied the synthetic Unicode fixture successfully.
+Windows denied file-symbolic-link creation for privileged checks; junction
+checks passed. Physical-device limits below remain untested.
+KNOWN LIMITS
+- The executable is unsigned.
+- OneDrive downloaded-only filtering uses a cached snapshot; later availability
+  changes can still involve the provider. Uncached cloud-only names are not counted.
+- Progress and time remaining are estimates, and may be unavailable after a
+  sizing error. Copy results remain visible in the activity area.
+- The app checks Robocopy results but does not verify every file by hash or test
+  restoration. An interrupted run can leave partial files.
+- Physical USB reconnection, actual drive-letter reassignment, physical
+  exFAT/FAT32 transfers, live OneDrive stalls, and elevated Explorer drag and drop
+  remain outside the release's verified coverage.
+
+See README.txt for copy modes, exclusions, filesystem limits, and safe-removal steps.
